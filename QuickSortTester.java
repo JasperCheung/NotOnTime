@@ -3,17 +3,17 @@
 //LAB01 -- What Does the Data Say?
 //2017-03-09
 /*
-n = 10 Time: 8452.0 ns
-n = 25 Time:  41657.0 ns
-n = 50 Time: 68824.0 ns
-n = 75 Time: 156062.0 ns
-n = 1000 Time : 2388320.0 ns
-n = 5000 Time: 7858635.0 ns
-n = 10,000 Time: 1.5483932E7 ns
-n = 10, ordered:
-n = 10, opposite order:
-n = 10, highest at the ends:
-n = 10, highest at the center:
+n = 10 Time: 14764.0 ns
+n = 25 Time:  77051.0 ns
+n = 50 Time: 256522.0 ns
+n = 75 Time: 329498.0 ns
+n = 1000 Time : 4477483.0 ns
+n = 5000 Time: 1.0864976E7 ns
+n = 10,000 Time: 2.6975761E7 ns
+n = 10, ordered: 104974.0 ns
+n = 10, opposite order: 6825.0 ns
+n = 10, highest at the ends: 7006.0 ns
+n = 10, highest at the center: 6377.0 ns
 
 We calculate the runtime it takes for a QuickSort to run on different arrays
 
@@ -67,6 +67,7 @@ public class QuickSortTester{
 	stop = System.nanoTime();
 	System.out.print("Time: ");
 	System.out.println(stop - start);
+
 	int[] arr5000 = new int[5000];
 	start = System.nanoTime();
 	QuickSort.qsort(arr5000);
@@ -85,6 +86,7 @@ public class QuickSortTester{
 	  data can be gathered from terminal prints
 	 */
 
+	//pre-sorted
         int[] best10 = {6, 13, 17, 22, 33, 34, 54, 55, 75, 83};
         start = System.nanoTime();
         QuickSort.qsort(best10);
@@ -92,6 +94,7 @@ public class QuickSortTester{
         System.out.print("Time: ");
         System.out.println(stop - start);
 	    
+	//pre-backwards-sorted
         int[] backwards10 = {83, 75, 55, 54, 34, 33, 22, 17, 13, 6};
         start = System.nanoTime();
         QuickSort.qsort(backwards10);
